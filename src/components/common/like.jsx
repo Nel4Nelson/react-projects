@@ -2,7 +2,10 @@ import React, { Component } from "react";
 
 class Like extends Component {
   render() {
-    return <i className="fa fa-heart-o" aria-hidden="true"></i>;
+    const { liked, onLike } = this.props;
+    let classes = "fa fa-heart";
+    if (!liked) classes += "-o";
+    return <i onClick={onLike} className={classes} aria-hidden="true"></i>;
   }
 }
 
