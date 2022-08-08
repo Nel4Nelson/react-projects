@@ -9,8 +9,8 @@ class ListGroup extends Component {
         <ul className="list-group m-2">
           {items.map((item) => (
             <li
+            key={item[textProperty]}
               onClick={() => onItemSelect(item)}
-              key={item[valueProperty]}
               className={
                 item === selectedItem
                   ? "list-group-item active"
